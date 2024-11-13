@@ -1,0 +1,11 @@
+a:4:{i:0;a:11:{s:2:"id";i:1;s:4:"name";s:16:"50 Crystal Coins";s:11:"category_id";i:1;s:4:"type";s:4:"item";s:6:"points";i:10;s:11:"description";s:37:"50 crystal coins. They weigh 5.00 oz.";s:6:"hidden";i:0;s:8:"ordering";i:1;s:7:"item_id";i:2160;s:10:"item_count";i:50;s:6:"images";s:89:"<img src="images/animated-items/2160.gif" width="32" height="32" border="0" alt="2160" />";}i:1;a:13:{s:2:"id";i:2;s:4:"name";s:13:"Knight Outfit";s:11:"category_id";i:2;s:4:"type";s:5:"addon";s:6:"points";i:10;s:11:"description";s:51:"This purchase will give you the full knight outfit.";s:6:"hidden";i:0;s:8:"ordering";i:2;s:11:"look_female";i:139;s:13:"addons_female";i:3;s:9:"look_male";i:131;s:11:"addons_male";i:3;s:6:"images";s:480:"<table style="width: 100%; text-align: center">
+	<tr>
+		<td>
+			<img alt="Knight Outfit" style="margin-left:-30px;margin-top:-30px;width:64px;height:64px;" src="images/animated-outfits/animoutfit.php?id=131&addons=3&head=4&body=38&legs=87&feet=114"/>
+		</td>
+		<td>
+			<img alt="Knight Outfit" style="margin-left:-30px;margin-top:-30px;width:64px;height:64px;" src="images/animated-outfits/animoutfit.php?id=139&addons=3&head=4&body=38&legs=87&feet=114"/>
+		</td>
+	</tr>
+</table>
+";}i:2;a:10:{s:2:"id";i:3;s:4:"name";s:12:"Rented Horse";s:11:"category_id";i:3;s:4:"type";s:5:"mount";s:6:"points";i:10;s:11:"description";s:51:"This purchase will give you the Rented Horse mount.";s:6:"hidden";i:0;s:8:"ordering";i:3;s:8:"mount_id";i:22;s:6:"images";s:111:"<img src="images/animated-outfits/animoutfit.php?id=421&addons=0&head=4&body=38&legs=87&feet=114" alt="Mount"/>";}i:3;a:10:{s:2:"id";i:4;s:4:"name";s:7:"PACC 30";s:11:"category_id";i:4;s:4:"type";s:4:"pacc";s:6:"points";i:10;s:11:"description";s:26:"30 Days of Premium Account";s:6:"hidden";i:0;s:8:"ordering";i:4;s:4:"days";i:30;s:6:"images";s:108:"<img src="https://noctera-global.com/plugins/gesior-shop-system/images/PremiumTime.png" alt="Premium Time"/>";}}

@@ -3,6 +3,7 @@
 		<img src="templates/tibiacom/images/news/icon_1.gif" class="NewsHeadlineIcon" />
 		<div class="NewsHeadlineDate">22.10.2024 - </div>
 		<div class="NewsHeadlineText">Hello!</div>
+				<div class="NewsHeadlineAuthor"><b>Author: </b><i>[Admin] Khaiser</i></div>
 			</div>
 </div>
 <table style="clear:both" border=0 cellpadding=0 cellspacing=0 width="100%" >

@@ -1,0 +1,54 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* library/gazerspectre.html.twig */
+class __TwigTemplate_e5d0d31a118eed0ce5fedaf731c52fd4 extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<div style=\"position: relative; height: 15px; width: 100%;\"> <a style=\"float: right;\" href=\"?subtopic=creatures&race=gazer\">next <img src=\"images/arrow_right.gif\" width=\"15\" height=\"11\" border=\"0\"/></a> <a style=\"position: absolute;\" href=\"?subtopic=creatures&race=gargoyle\"><img src=\"images/arrow_left.gif\" width=\"15\" height=\"11\" border=\"0\"/> previous</a> <div style=\"position: absolute; width: 80%; margin-left: 10%; margin-right: 10%; text-align: center;\"><a href=\"?subtopic=creatures\"><img src=\"images/arrow_up.gif\" width=\"11\" height=\"15\" border=\"0\"/> back</a></div></div><div style=\"position: relative; top: 25px; clear: both; \"><div style=\"height: 64px; margin-bottom: 5px;\"> <h2 style=\"float: right;\">Gazer Spectres</h2> <img src=\"images/library/gazerspectre.gif\"/></div><div style=\"margin-bottom: 35px; clear: both;\"> <p>The Dire Spectres arrived as phantoms to this world. Born from dark fragments of lost souls, they are not bound to this plane, nor do they have a past. They long for a physical existence and their sole goal is to anchor themselves to our world. They are literally pure evil woven from bad spare parts of souls and feed on the life energy of any living creature. The most powerful dire spectres are the oldest. Those who clung to this plane for long enough, eventually gained adequate power to control and coordinate other spectres. Those are the most dangerous and resourceful and should be treated with the utmost care. Gazer Spectres are also called \"Watchers\" and function as scouts among large groups of their kin. They are versatile distance fighters and their strong 'gaze' is not to be trifled with.</p> <p>Gazer Spectres have 4500 hitpoints. They cannot be paralysed. Moreover, they are strong against fire and physical damage. On the other hand, they are weak against ice damage. These creatures can neither be summoned nor convinced. In addition, they are able to sense invisible creatures.</p> <p>Gazer Spectres yield 4200 experience points. They carry brown crystal splinters, platinum coins, small diamonds, small sapphires and sometimes other items with them.</p> </div></div>";
+    }
+
+    public function getTemplateName()
+    {
+        return "library/gazerspectre.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "library/gazerspectre.html.twig", "/var/www/html/system/templates/library/gazerspectre.html.twig");
+    }
+}

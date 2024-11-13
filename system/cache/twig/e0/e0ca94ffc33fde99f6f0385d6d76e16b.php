@@ -1,0 +1,54 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* library/chicken.html.twig */
+class __TwigTemplate_15c7a95b3436fd1069bed5966a420f4d extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<div style=\"position: relative; height: 15px; width: 100%;\">  <a style=\"float: right;\" href=\"?subtopic=creatures&race=chokingfear\">next <img src=\"images/arrow_right.gif\" width=\"15\" height=\"11\" border=\"0\"/></a>  <a style=\"position: absolute;\" href=\"?subtopic=creatures&race=chakoyawindcaller\"><img src=\"images/arrow_left.gif\" width=\"15\" height=\"11\" border=\"0\"/> previous</a>  <div style=\"position: absolute; width: 80%; margin-left: 10%; margin-right: 10%; text-align: center;\"><a href=\"?subtopic=creatures\"><img src=\"images/arrow_up.gif\" width=\"11\" height=\"15\" border=\"0\"/> back</a></div></div><div style=\"position: relative; top: 25px; clear: both; \"><div style=\"height: 64px; margin-bottom: 5px;\">  <h2 style=\"float: right;\">Chickens</h2>  <img src=\"images/library/chicken.gif\"/></div><div style=\"margin-bottom: 35px; clear: both;\">  <p>Chickens are domesticated animals that usually live on farms. Their eggs and their flesh makes them quite useful and neither the rumour of evil battle chickens nor the myth of a hidden town inhabited by talking chickens turned out to be true. Chickens have accompanied mankind and other races from the beginning and they have spread over the world as civilisation advanced.</p>  <p>Chickens have 15 hitpoints. It takes 220 mana to summon or convince these creatures.</p>  <p>Chickens yield 0 experience points. They carry chicken feathers, worms and sometimes other items with them.</p>  </div></div>";
+    }
+
+    public function getTemplateName()
+    {
+        return "library/chicken.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "library/chicken.html.twig", "/var/www/html/system/templates/library/chicken.html.twig");
+    }
+}

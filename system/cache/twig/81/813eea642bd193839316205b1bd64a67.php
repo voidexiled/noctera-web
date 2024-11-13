@@ -1,0 +1,54 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* library/insectoidscout.html.twig */
+class __TwigTemplate_e7a4552a9304442ec2b549ecdb68d510 extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<div style=\"position: relative; height: 15px; width: 100%;\">  <a style=\"float: right;\" href=\"?subtopic=creatures&race=insectoidworker\">next <img src=\"images/arrow_right.gif\" width=\"15\" height=\"11\" border=\"0\"/></a>  <a style=\"position: absolute;\" href=\"?subtopic=creatures&race=insectswarm\"><img src=\"images/arrow_left.gif\" width=\"15\" height=\"11\" border=\"0\"/> previous</a>  <div style=\"position: absolute; width: 80%; margin-left: 10%; margin-right: 10%; text-align: center;\"><a href=\"?subtopic=creatures\"><img src=\"images/arrow_up.gif\" width=\"11\" height=\"15\" border=\"0\"/> back</a></div></div><div style=\"position: relative; top: 25px; clear: both; \"><div style=\"height: 64px; margin-bottom: 5px;\">  <h2 style=\"float: right;\">Insectoid Scouts</h2>  <img src=\"images/library/insectoidscout.gif\"/></div><div style=\"margin-bottom: 35px; clear: both;\">  <p>Sightings of Insectoid Scouts are a relatively new phenomenon. After several skirmishes of the creatures with Tibian natives, a few things about them can be considered as verified facts. The Insectoid Scouts are not aggressive in the sense that they are attacking towns or settlements, instead, they are usually found in rather remote areas. When encountered though, they are rather violent and attack everyone relentlessly. Despite their build, they are rather tough and extremely strong. Their behaviour suggests that they are looking for something or spying on someone. This behaviour earned them the nickname 'scouts', and military officials of the major powers are all concerned that they might be indeed forerunners for something bigger and more sinister.</p>  <p>Insectoid Scouts have 230 hitpoints. They are strong against earth and physical damage. On the other hand, they are weak against energy, fire and ice damage. These creatures can neither be summoned nor convinced. In addition, they are able to sense invisible creatures.</p>  <p>Insectoid Scouts yield 150 experience points. They carry gold coins and sometimes other items with them.</p>  </div></div>";
+    }
+
+    public function getTemplateName()
+    {
+        return "library/insectoidscout.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "library/insectoidscout.html.twig", "/var/www/html/system/templates/library/insectoidscout.html.twig");
+    }
+}

@@ -1,0 +1,54 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* library/bear.html.twig */
+class __TwigTemplate_8e22fdab3ae4c3cd98817fb17451a5b9 extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<div style=\"position: relative; height: 15px; width: 100%;\">  <a style=\"float: right;\" href=\"?subtopic=creatures&race=behemoth\">next <img src=\"images/arrow_right.gif\" width=\"15\" height=\"11\" border=\"0\"/></a>  <a style=\"position: absolute;\" href=\"?subtopic=creatures&race=bat\"><img src=\"images/arrow_left.gif\" width=\"15\" height=\"11\" border=\"0\"/> previous</a>  <div style=\"position: absolute; width: 80%; margin-left: 10%; margin-right: 10%; text-align: center;\"><a href=\"?subtopic=creatures\"><img src=\"images/arrow_up.gif\" width=\"11\" height=\"15\" border=\"0\"/> back</a></div></div><div style=\"position: relative; top: 25px; clear: both; \"><div style=\"height: 64px; margin-bottom: 5px;\">  <h2 style=\"float: right;\">Bears</h2>  <img src=\"images/library/bear.gif\"/></div><div style=\"margin-bottom: 35px; clear: both;\">  <p>Bears live in the holes and forests of Tibia. They are pacific animals, but they can get quite aggressive when you enter their habitat. Their stroke can be very strong, but as Bears are slow you should be able to flee. It is recommended to attack Bears with distance fighting weapons.</p>  <p>Bears have 80 hitpoints. They are strong against holy damage. On the other hand, they are weak against death and ice damage. It takes 300 mana to summon or convince these creatures.</p>  <p>Bears yield 23 experience points. They carry ham, meat and sometimes other items with them.</p>  </div></div>";
+    }
+
+    public function getTemplateName()
+    {
+        return "library/bear.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "library/bear.html.twig", "/var/www/html/system/templates/library/bear.html.twig");
+    }
+}
