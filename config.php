@@ -328,7 +328,7 @@ $config = array(
 
 	// load page
 	'pace_load' => true, // load page top bar
-	'pace_theme' => 'big-counter', // big-counter, bounce, center-atom, center-circle, center-radar, center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, max-osx, material, minimal
+	'pace_theme' => 'bounce', // big-counter, bounce, center-atom, center-circle, center-radar, center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, max-osx, material, minimal
 	'pace_color' => 'red', // black, blue, green, orange, pink, purple, red, silver, white, yellow
 
 	// char bazaar
