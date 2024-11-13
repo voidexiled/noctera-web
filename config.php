@@ -10,11 +10,11 @@
  *
  * Minimally 'server_path' directive have to be filled, other options are optional.
  *
- * @package   MyAAC
- * @author    Slawkens <slawkens@gmail.com>
- * @author    OpenTibiaBR
- * @copyright 2023 MyAAC
- * @link      https://github.com/opentibiabr/myaac
+ * @package   Noctera
+ * @author    Voidexiled <voidexiled@gmail.com>
+ * @author    Noctera Global
+ * @copyright 2024 Noctera Global
+
  */
 
 $config = array(
@@ -32,14 +32,14 @@ $config = array(
 	 */
 	'env' => 'prod', // 'prod' for production and 'dev' for development
 
-	'template' => 'tibiacom', // template used by website (kathrine, tibiacom)
+	'template' => 'kathrine', // template used by website (kathrine, tibiacom)
 	'template_allow_change' => false, // allow users to choose their own template while browsing website?
 
 	'vocations_amount' => 4, // how much basic vocations your server got (without promotion)
 
 	// what client version are you using on this OT?
 	// used for the Downloads page and some templates as well
-    'client' => 1321, // 1321 = client 13.21
+    'client' => 1340, // 1321 = client 13.21
 
 	'session_prefix' => 'myaac_', // must be unique for every site on your server
 	'friendly_urls' => false, // mod_rewrite is required for this, it makes links looks more elegant to eye, and also are SEO friendly (example: https://localhost/guilds/Testing instead of https://localhost?subtopic=guilds&name=Testing). Remember to rename .htaccess.dist to .htaccess
@@ -52,7 +52,7 @@ $config = array(
 
 	// head options (html)
 	'meta_description' => 'Tibia is a free massive multiplayer online role playing game (MMORPG).', // description of the site
-	'meta_keywords' => 'free online game, free multiplayer game, ots, open tibia server', // keywords list separated by commas
+	'meta_keywords' => 'free online game, free multiplayer game, ots, open tibia server, noctera, noctera-global, global, tibia, tibiacom, tibia-server, open-tibia, open-tibia-server, ots-server, ots-global, ots-noctera, noctera-server, noctera-global, global-server, global-noctera, server-ots, server-tibia, server-open-tibia, server-noctera, server-global', // keywords list separated by commas
 	'title_separator' => ' - ',
 
 	// footer
@@ -95,7 +95,7 @@ $config = array(
 	'account_management' => true, // disable if you're using other method to manage users (fe. tfs account manager)
 	'account_login_by_email' => true, // use email instead of Account Name like in latest Tibia
 	'account_login_by_email_fallback' => false, // allow also additionally login by Account Name/Number (for users that might forget their email)
-	'account_create_auto_login' => false, // auto login after creating account?
+	'account_create_auto_login' => true, // auto login after creating account?
 	'account_create_character_create' => true, // allow directly to create character on create account page?
 	'account_mail_verify' => false, // force users to confirm their email addresses when registering account
   'account_verified_only' => false, // force users to confirm their email to login in game
@@ -224,15 +224,15 @@ $config = array(
 	'guild_management' => true, // enable guild management system on the site?
 	'guild_need_level' => 100, // min. level to form a guild
 	'guild_need_premium' => true, // require premium account to form a guild?
-	'guild_image_size_kb' => 80, // maximum size of the guild logo image in KB (kilobytes)
+	'guild_image_size_kb' => 400, // maximum size of the guild logo image in KB (kilobytes)
 	'guild_description_chars_limit' => 1000, // limit of guild description
 	'guild_description_lines_limit' => 6, // limit of lines, if description has more lines it will be showed as long text, without 'enters'
 	'guild_motd_chars_limit' => 150, // limit of MOTD (message of the day) that is shown later in the game on the guild channel
 
 	// online page
 	'online_record' => true, // display players record?
-	'online_vocations' => false, // display vocation statistics?
-	'online_vocations_images' => false, // display vocation images?
+	'online_vocations' => true, // display vocation statistics?
+	'online_vocations_images' => true, // display vocation images?
 	'online_skulls' => true, // display skull images
 	'online_outfit' => true,
 	'online_afk' => false,
@@ -251,8 +251,8 @@ $config = array(
 	// highscores page
 	'highscores_vocation_box' => true, // show 'Choose a vocation' box on the highscores (allowing peoples to sort highscores by vocation)?
 	'highscores_vocation' => true, // show player vocation under his nickname?
-	'highscores_frags' => false, // show 'Frags' tab (best fraggers on the server)? Only 0.3
-	'highscores_balance' => false, // show 'Balance' tab (richest players on the server)
+	'highscores_frags' => true, // show 'Frags' tab (best fraggers on the server)? Only 0.3
+	'highscores_balance' => true, // show 'Balance' tab (richest players on the server)
 	'highscores_outfit' => true, // show player outfit?
 	'highscores_country_box' => false, // doesnt work yet! (not implemented)
 	'highscores_groups_hidden' => 3, // this group id and higher won't be shown on the highscores
@@ -299,21 +299,21 @@ $config = array(
 	'news_limit' => 5, // limit of news on the latest news page
 	'news_ticker_limit' => 5, // limit of news in tickers (mini news) (0 to disable)
 	'news_date_format' => 'j.n.Y', // check php manual date() function for more info about this
-	'news_author' => false, // show author of the news
+	'news_author' => true, // show author of the news
 
 	// banner home
-	'banner_status' => false,
+	'banner_status' => true,
 	'banner_image' => '500x660.png', // templates->tibiacom->images->carousel
 	'banner_link' => 'www.instagram.com',
 
 	// status bar
 	'status_bar' => true,
 	'client_link' => 'https://github.com/dudantas/tibia-client/releases/tag/13.21.13839', // link to download tibia client
-	'discord_link' => 'https://discord.com/invite/gvTj5sh9Mp', // link to join discord channel
+	'discord_link' => 'https://discord.gg/4KzZMApf', // link to join discord channel
 	'whatsapp_link' => '5511912345678', // wa.me/5511912345678
 	'instagram_link' => 'profile', // www.instagram.com/profile
 	'facebook_link' => 'page', // www.facebook.com/page
-	'collapse_status' => true,
+	'collapse_status' => false,
 
 	// events
 	'events_xml' => 'data/xml/events.xml',
@@ -328,8 +328,8 @@ $config = array(
 
 	// load page
 	'pace_load' => true, // load page top bar
-	'pace_theme' => 'flat-top', // big-counter, bounce, center-atom, center-circle, center-radar, center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, max-osx, material, minimal
-	'pace_color' => 'white', // black, blue, green, orange, pink, purple, red, silver, white, yellow
+	'pace_theme' => 'big-counter', // big-counter, bounce, center-atom, center-circle, center-radar, center-simple, corner-indicator, fill-left, flash, flat-top, loading-bar, max-osx, material, minimal
+	'pace_color' => 'red', // black, blue, green, orange, pink, purple, red, silver, white, yellow
 
 	// char bazaar
 	'bazaar_create' => 50, // price to create auction
@@ -374,7 +374,7 @@ $config = array(
 	'google_analytics_id' => '', // e.g.: UA-XXXXXXX-X
 	'experiencetable_columns' => 4, // how many columns to display in experience table page. * experiencetable_rows, 5 = 500 (will show up to 500 level)
 	'experiencetable_rows' => 500, // till how many levels in one column
-	'date_timezone' => 'America/Sao_Paulo', // more info at http://php.net/manual/en/timezones.php
+	'date_timezone' => 'America/Chicago', // more info at http://php.net/manual/en/timezones.php
 	'footer_show_load_time' => true, // display load time of the page in the footer
 
 	'npc' => [],
