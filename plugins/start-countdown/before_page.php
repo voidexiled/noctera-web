@@ -11,7 +11,7 @@
 if(!isset($config['start-countdown']))
 {
 	$config['start-countdown'] = array(
-		'date' => '30.03.2021 18:00:00' // just an example
+		'date' => '01.01.2025 18:00:00'
 	);
 }
 
