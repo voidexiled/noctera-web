@@ -2,3 +2,8 @@ animated-items
 animated-outfits
 
 config.local.php
+
+system/cache
+system/php_sessions
+phpmyadmin/tmp/
+

@@ -308,9 +308,9 @@ $config = array(
 
 	// status bar
 	'status_bar' => true,
-	'client_link' => 'https://github.com/dudantas/tibia-client/releases/tag/13.21.13839', // link to download tibia client
+	'client_link' => 'https://github.com/voidexiled/noctera-launcher/releases/download/v0.0.0.0-BETA/Noctera.Global.Launcher.v1.0.rar', // link to download tibia client
 	'discord_link' => 'https://discord.gg/4KzZMApf', // link to join discord channel
-	'whatsapp_link' => '5511912345678', // wa.me/5511912345678
+	'whatsapp_link' => '', // wa.me/5511912345678
 	'instagram_link' => 'profile', // www.instagram.com/profile
 	'facebook_link' => 'page', // www.facebook.com/page
 	'collapse_status' => false,
