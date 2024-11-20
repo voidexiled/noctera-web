@@ -101,6 +101,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dados["payer"]["address"]["federal_unit"] = $country;
 
     $randomKey = md5(uniqid(rand(), true));
+    echo $randomKey;
+    echo $authorizationToken;
     curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://api.mercadopago.com/v1/payments',
         CURLOPT_RETURNTRANSFER => true,
