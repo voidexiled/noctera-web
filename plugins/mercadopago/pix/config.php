@@ -14,7 +14,7 @@
  $conversionRate = $pointsByDonate / $priceByPoints; 
  $debug = false;
 $baseUrl = 'https://noctera-global.com/';
-$notificationUrl = 'https://noctera-global.com/?mpnotification';
+$notificationUrl = 'https://noctera-global.com/?p=mpnotification';
 $noSessionUrl = 'https://noctera-global.com/?account/manage';
  $donationType = 'coins'; // coins, coins_transferable or premium_points
  $doublePoints = false; // not added yet
