@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $resultado = json_decode($response);
     echo $resultado;
     $collector_id = isset($resultado->id) ? $resultado->id : null;
-    echo '<br>'
+    echo '<br>';
     echo $collector_id;
     curl_close($curl);
 
