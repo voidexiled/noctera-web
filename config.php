@@ -58,7 +58,7 @@ $config = array(
 	'title_separator' => ' - ',
 
 	// footer
-	'footer' => ''/*'<br/>Your Server &copy; 2016. All rights reserved.'*/,
+	'footer' => '<br/>Noctera Global &copy; 2024. All rights reserved.', 
 
 	'language' => 'en', // default language (currently only 'en' available)
 	'language_allow_change' => false,
