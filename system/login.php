@@ -132,7 +132,7 @@ if (ACTION === 'logout' && !isset($_REQUEST['account_login'])) {
                     }
 
                     $tmp[$ip] = $t;
-                    $cache->set('failed_logins', serialize($tmp), 60 * 60); // save for 1 hour
+                    $cache->set('failed_logins', serialize($tmp), 60 * 5); // save for 1 hour
                 } else {
                     $errors[] = $errorMessage;
                 }
