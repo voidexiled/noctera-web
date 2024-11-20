@@ -429,7 +429,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                                             <ul class="payment-options">
                                                                                 <div class="payment-option">
                                                                                     <li>
-                                                                                        <input type="radio" id="payment-1" name="pagamento" value="metodo1" required>
+                                                                                        <input type="radio" id="payment-1" name="pagamento" value="Pix" required>
                                                                                         <label for="payment-1">
                                                                                             <div class="paymentid"><img src="images/payment/paymentmethodcategory145.gif">
                                                                                             </div>
