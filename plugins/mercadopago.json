@@ -1,0 +1,20 @@
+{
+	"name": "mercadopago 2.0",
+	"description": "Automatic mercadopago payment system gateway. Page Terms add by AndreOaM",
+	"version": "2.0",
+	"author": "UkimiaNoMuro",
+	"contact": "andreoam@gmail.com",
+	"require": {
+	"myaac": "0.8.1"
+	},
+	"install": "plugins/mercadopago/install.php",
+	"uninstall": [
+		"css/mercadopago.css",
+		"css/mpnotification.css",
+		"plugins/mercadopago.json",
+		"plugins/mercadopago",
+		"system/pages/donate.php",
+		"system/pages/mpnotification.php"
+		
+	]
+}

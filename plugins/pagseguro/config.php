@@ -20,7 +20,7 @@ $config['pagSeguro'] = [
         'sandbox'       => '',
     ],
     'urlRedirect'       => '?subtopic=donate&action=final', // default should be good
-    'productName'       => 'My Coins', // Your coins name, ex: Server Name, Coins, Premium Points, etc..
+    'productName'       => 'Tibia Coins', // Your coins name, ex: Server Name, Coins, Premium Points, etc..
     'value'             => 0.10,
     'doubleCoins'       => false, // should coins be doubled? for example: for 5 coins donated you become 10.
     'doubleCoinsStart'  => 300, // if doubleCoins is activated, what is min value to activate double coins

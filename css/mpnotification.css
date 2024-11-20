@@ -1,0 +1,89 @@
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.status-approved {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-pending {
+    color: #5A2800;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: bold;
+}
+
+.copy-message {
+    background-color: rgba(0, 128, 0, 0.9); /* Cor de fundo verde escuro */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 35%; /* Distância do topo */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Centralizado horizontalmente */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.6s ease-in-out; /* Transição suave para a opacidade */
+    z-index: 1000; /* Garante que a mensagem fique acima de outros elementos */
+}
+
+.copy-message.fade-in {
+    opacity: 1;
+}
+
+.pending-message {
+    background-color: rgba(115, 10, 10, 0.8); /* Cor de fundo vermelha escura */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #fff; /* Borda branca */
+    position: fixed;
+    top: 10%; /* Distância do topo */
+    left: 50%; /* Centralizado horizontalmente */
+    transform: translateX(-50%); /* Centralizado horizontalmente */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.6s ease-in-out; /* Transição suave para a opacidade */
+    z-index: 1000; /* Garante que a mensagem fique acima de outros elementos */
+}
+
+.pending-message.fade-in {
+    opacity: 1;
+}
+
+.BigButton {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto 20 !important;
+}
+
+.button-container {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important; 
+    margin-bottom: 20px !important;
+}
+

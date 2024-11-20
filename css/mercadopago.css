@@ -1,0 +1,322 @@
+table{
+    margin: auto;
+}
+
+.formdonate {
+    max-width: 800px; /* Define a largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    display: flex; /* Torna o contêiner um contêiner flexível */
+    padding: 20px; /* Adiciona um espaço interno de 20px ao redor do contêiner */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    
+}
+
+.formdonate label {
+    align-self: flex-start; /* Mantém os textos alinhados à esquerda */
+}
+
+/* Estilos para as opções de doação */
+.donation-options {
+    list-style-type: none; /* Remove a marcação de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: grid; /* Usa o layout de grade para as opções de doação */
+    grid-template-columns: repeat(3, 1fr); /* Divide as opções em 4 colunas de largura igual */
+    grid-auto-rows: 150px; /* Ajusta automaticamente a altura das linhas */
+    gap: 10px; /* Define o espaçamento entre as opções */
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para a div donation-option */
+.donation-option {
+    background-image: url('../images/payment/serviceid_icon_normal.png'); /* Define a imagem de sobreposição */
+    background-repeat: no-repeat;
+    position: relative; /* Define a posição como relativa para que os elementos filhos possam ser posicionados relativamente a ela */
+    cursor: pointer; /* Altera o cursor para pointer quando passar o mouse sobre a div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 20px; /* Ajuste conforme necessário */
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+}
+
+
+/* Estilos para o efeito de sobreposição ao passar o mouse */
+.donation-option:hover::after {
+    content: ''; /* Adiciona conteúdo pseudo-elemento ::after */
+    position: absolute; /* Define a posição como absoluta */
+    top: 0; /* Posiciona no topo da div */
+    left: 0; /* Posiciona à esquerda da div */
+    width: 150px; /* Define a largura igual à largura da div */
+    height: 150px; /* Define a altura igual à altura da div */
+    background-image: url('../images/payment/serviceid_icon_over.png') ; /* Define a imagem de sobreposição */
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    z-index: 1; /* Coloca a imagem sobre todos os outros elementos */
+    pointer-events: none; /* Faz com que a imagem não seja clicável */
+}
+
+.tcqtn{
+    position: absolute; /* Define a posição como absoluta */
+    top: 20px; /* Posiciona a imagem 48px abaixo do topo */
+    color: white;
+    right: 0px;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer; /* Altera o cursor para indicar que as imagens são clicáveis */
+    font-size: 8pt;
+}
+
+.tcprice{
+    position: absolute; /* Define a posição como absoluta */
+    color: white; 
+    right: 0px; 
+    top: 125px; /* Posiciona a imagem 48px abaixo do topo */
+    width: 150px; 
+    height: 20px; 
+    text-align: center;
+    cursor: pointer; /* Altera o cursor para indicar que as imagens são clicáveis */
+    font-size: 8pt;
+}
+
+.donation-options li {
+    flex-direction: column; /* Coloca a imagem acima do texto */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    text-align: center; /* Centraliza horizontalmente o texto */
+}
+
+.donation-options input[type="radio"] {
+    margin-top: auto; /* Adiciona um pequeno espaço acima do input */
+}
+
+.option-item {
+    text-align: center; /* Alinha o conteúdo no centro */
+}
+
+.option-item input[type="radio"] {
+    display: block; /* Exibe o botão de rádio como bloco */
+    margin: 0 auto; /* Centraliza horizontalmente o botão de rádio */
+}
+
+/* Oculta os botões de rádio */
+.donation-options input[type="radio"] {
+    position: absolute; /* Altera a posição dos botões de rádio para absoluta */
+    left: -9999px; /* Move os botões de rádio para fora da tela */
+}
+
+/* Adiciona um estilo para o pseudo-elemento quando a imagem estiver selecionada */
+.donation-option input[type="radio"]:checked + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/payment/serviceid_icon_selected.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 99; /* Para que o fundo fique atrás do conteúdo */
+}
+
+.CustomerIdentification {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-size: 12pt;
+    margin-bottom: 0px
+}
+
+#DisplayEMail {
+    cursor: pointer
+}
+
+#MaskedEMail {
+    visibility: hidden;
+    display: none
+}
+
+#ReadableEMail {
+    visibility: hidden;
+    display: none
+}
+
+#ButtonEMail {
+    position: relative;
+    right: 0;
+    top: 0px;
+    cursor: pointer
+}
+
+.CustomerIdentification #ButtonEMail {
+    top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    right: initial
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9998; /* Um valor alto para garantir que fique acima de tudo */
+    display: none; /* Oculto por padrão */
+}
+
+/* Tornar a div #ContentHelper interativa e visível acima da sobreposição */
+.overlay-active #ContentHelper {
+    position: relative;
+    z-index: 9999; /* Um valor acima da sobreposição */
+}
+
+/* Mostra a sobreposição */
+.overlay-active .overlay {
+    display: block;
+}
+
+.formpayment {
+    max-width: 800px; /* Define a largura máxima do contêiner */
+    margin: auto; /* Centraliza o contêiner horizontalmente */
+    display: flex; /* Torna o contêiner um contêiner flexível */
+    padding: 20px; /* Adiciona um espaço interno de 20px ao redor do contêiner */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.formpayment label {
+    align-self: flex-start; /* Mantém os textos alinhados à esquerda */
+}
+
+.payment-option img{
+    top: 0px;
+}
+
+/* Estilos para as opções de pagamento */
+.payment-options {
+    list-style-type: none; /* Remove a marcação de lista */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    display: flex; /* Usa o layout flexível para as opções de pagamento */
+    flex-wrap: wrap; /* Permite que os itens sejam quebrados em várias linhas */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Define o espaçamento entre as opções */
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Estilos para a div payment-option */
+.payment-option {
+    background-image: url('../images/payment/pmcid_icon_normal.png'); /* Define a imagem de fundo */
+    background-repeat: no-repeat;
+    position: relative; /* Define a posição como relativa para que os elementos filhos possam ser posicionados relativamente a ela */
+    cursor: pointer; /* Altera o cursor para pointer quando passar o mouse sobre a div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding: 20px; /* Ajuste conforme necessário */
+    box-sizing: border-box; /* Inclui padding no tamanho total */
+}
+
+/* Estilos para o efeito de sobreposição ao passar o mouse */
+.payment-option:hover::after {
+    content: ''; /* Adiciona conteúdo pseudo-elemento ::after */
+    position: absolute; /* Define a posição como absoluta */
+    top: 0; /* Posiciona no topo da div */
+    left: 0; /* Posiciona à esquerda da div */
+    width: 150px; /* Define a largura igual à largura da div */
+    height: 147px; /* Define a altura igual à altura da div */
+    background-image: url('../images/payment/pmcid_icon_over.png'); 
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    z-index: 1; /* Coloca a imagem sobre todos os outros elementos */
+    pointer-events: none; /* Faz com que a imagem não seja clicável */
+}
+
+.paymentid {
+    position: absolute;
+    width: 150px;
+    height: 147px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.paymentid img {
+    position: absolute;
+    top: 20px;
+    left: 47px;
+}
+
+.paymenttcqtn {
+    position: absolute; /* Define a posição como absoluta */
+    top: 70px; /* Posiciona a imagem 48px abaixo do topo */
+    color: white;
+    right: 0px;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer; /* Altera o cursor para indicar que as imagens são clicáveis */
+    font-size: 8pt;
+}
+
+.paymenttcprice {
+    position: absolute; /* Define a posição como absoluta */
+    color: white; 
+    right: 0px; 
+    top: 105px; /* Posiciona a imagem 48px abaixo do topo */
+    width: 150px; 
+    height: 20px; 
+    text-align: center;
+    cursor: pointer; /* Altera o cursor para indicar que as imagens são clicáveis */
+    font-size: 8pt;
+}
+
+.payment-options li {
+    flex-direction: column; /* Coloca a imagem acima do texto */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    text-align: center; /* Centraliza horizontalmente o texto */
+}
+
+.payment-options input[type="radio"] {
+    margin-top: auto; /* Adiciona um pequeno espaço acima do input */
+}
+
+.payment-option-item {
+    text-align: center; /* Alinha o conteúdo no centro */
+}
+
+.payment-option-item input[type="radio"] {
+    display: block; /* Exibe o botão de rádio como bloco */
+    margin: 0 auto; /* Centraliza horizontalmente o botão de rádio */
+}
+
+/* Oculta os botões de rádio */
+.payment-options input[type="radio"] {
+    position: absolute; /* Altera a posição dos botões de rádio para absoluta */
+    left: -9999px; /* Move os botões de rádio para fora da tela */
+}
+
+/* Adiciona um estilo para o pseudo-elemento quando a imagem estiver selecionada */
+.payment-option input[type="radio"]:checked + label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/payment/serviceid_icon_selected.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 99; /* Para que o fundo fique atrás do conteúdo */
+}
