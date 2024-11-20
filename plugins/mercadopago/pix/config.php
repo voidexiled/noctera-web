@@ -12,7 +12,7 @@
  $pointsByDonate = 1; //  coins
  $priceByPoints = 0.10; // Valor por ponto em reais
  $conversionRate = $pointsByDonate / $priceByPoints; 
- $debug = false;
+ $debug = true;
 $baseUrl = 'https://noctera-global.com/';
 $notificationUrl = 'https://noctera-global.com/?p=mpnotification';
 $noSessionUrl = 'https://noctera-global.com/?account/manage';

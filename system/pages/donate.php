@@ -101,8 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dados["payer"]["address"]["federal_unit"] = $country;
 
     $randomKey = md5(uniqid(rand(), true));
-    echo $randomKey;
-    echo $authorizationToken;
+    
     curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://api.mercadopago.com/v1/payments',
         CURLOPT_RETURNTRANSFER => true,
@@ -117,7 +116,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ));
     $response = curl_exec($curl);
     $resultado = json_decode($response);
+    echo $resultado;
     $collector_id = isset($resultado->id) ? $resultado->id : null;
+    echo '<br>'
+    echo $collector_id;
     curl_close($curl);
 
     // Display full response for debugging if debug is enabled
