@@ -115,6 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ),
     ));
     $response = curl_exec($curl);
+    echo $response;
     $resultado = json_decode($response);
     echo $config['mercadopago'];
     $collector_id = isset($resultado->id) ? $resultado->id : null;
