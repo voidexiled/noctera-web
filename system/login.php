@@ -119,7 +119,6 @@ if (ACTION === 'logout' && !isset($_REQUEST['account_login'])) {
                 // temporary solution for blocking failed login attempts
                 if ($cache->enabled()) {
                     if (isset($t)) {
-                        $t = array('attempts' => 1, 'last' => time());
                         $t['attempts']++;
                         $t['last'] = time();
 
