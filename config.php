@@ -19,6 +19,9 @@
 
 $config = array(
 	// directories & files
+	$config['mercadopago'] = true;
+
+	
 	'server_path' => '', // path to the server directory (same directory where config file is located)
 
 	/**

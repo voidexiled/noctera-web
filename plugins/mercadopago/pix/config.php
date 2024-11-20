@@ -13,9 +13,9 @@
  $priceByPoints = 0.10; // Valor por ponto em reais
  $conversionRate = $pointsByDonate / $priceByPoints; 
  $debug = false;
- $baseUrl = 'https://underfox.servegame.com';
- $notificationUrl = $baseUrl . '/?mpnotification';
- $noSessionUrl = $baseUrl . '/?account/manage';
+$baseUrl = 'https://noctera-global.com/';
+$notificationUrl = https://noctera-global.com/?mpnotification';
+$noSessionUrl = https://noctera-global.com/?account/manage';
  $donationType = 'coins'; // coins, coins_transferable or premium_points
  $doublePoints = false; // not added yet
  $authorizationToken = 'APP_USR-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
