@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dados["transaction_amount"] = $totalValue;
     $dados["description"] = $_POST['description'] ?: 'Value and Coins';
     $dados["external_reference"] = "Quantidade Tibia Coins $pontosGanhos | Valor pago R$$totalValue";
-    $dados["payment_method_id"] = "metodo1";
+    $dados["payment_method_id"] = "Pix";
     $dados["notification_url"] = $notificationUrl;
     $dados["payer"]["email"] = $_POST['email_cob'];
     $dados["payer"]["first_name"] = $config['lua']['serverName'] . ' -';
