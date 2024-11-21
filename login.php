@@ -83,33 +83,76 @@ switch ($action) {
       'gamingyoutubeviewer'  => 0
     ]));
 
-  case 'eventschedule':
-    $eventlist = [];
-    $file_path = config('server_path') . 'data/XML/events.xml';
-    if (!file_exists($file_path)) {
-      die(json_encode([]));
-    }
-    $xml = new DOMDocument;
-    $xml->load($file_path);
-    $tableevent = $xml->getElementsByTagName('event');
+    case 'eventschedule':
+      $eventlist = [];
 
-    foreach ($tableevent as $event) {
-      if ($event) {
-        $eventlist[] = [
-          'colorlight'      => parseEvent($event->getElementsByTagName('colors'), false, 'colorlight'),
-          'colordark'       => parseEvent($event->getElementsByTagName('colors'), false, 'colordark'),
-          'description'     => parseEvent($event->getElementsByTagName('description'), false, 'description'),
-          'displaypriority' => intval(parseEvent($event->getElementsByTagName('details'), false, 'displaypriority')),
-          'enddate'         => intval(parseEvent($event, true, false)),
-          'isseasonal'      => getBoolean(intval(parseEvent($event->getElementsByTagName('details'), false, 'isseasonal'))),
-          'name'            => $event->getAttribute('name'),
-          'startdate'       => intval(parseEvent($event, true, true)),
-          'specialevent'    => intval(parseEvent($event->getElementsByTagName('details'), false, 'specialevent'))
-        ];
+      $json_file_path = config('server_path') . 'data/json/eventscheduler/events.json';
+      $xml_file_path = config('server_path') . 'data/XML/events.xml';
+
+      if (file_exists($json_file_path)) {
+          $jsonContent = file_get_contents($json_file_path);
+          $events = json_decode($jsonContent, true);
+
+          if (json_last_error() !== JSON_ERROR_NONE) {
+              error_log("Error parsing JSON: " . json_last_error_msg());
+              die(json_encode([]));
+          }
+
+          foreach ($events['events'] as $event) {
+              if ($event) {
+                  $startdate = strtotime($event['startdate'] ?? ''); // Convert start date to timestamp
+                  $enddate = strtotime($event['enddate'] ?? '');     // Convert end date to timestamp
+
+                  $eventData = [
+                      'colorlight'      => $event['colors']['colorlight'] ?? '',
+                      'colordark'       => $event['colors']['colordark'] ?? '',
+                      'description'     => $event['description'] ?? '',
+                      'displaypriority' => intval($event['details']['displaypriority'] ?? 0),
+                      'enddate'         => $enddate,
+                      'isseasonal'      => getBoolean(intval($event['details']['isseasonal'] ?? 0)),
+                      'name'            => $event['name'] ?? '',
+                      'startdate'       => $startdate,
+                      'specialevent'    => getBoolean(intval($event['details']['specialevent'] ?? 0))
+                  ];
+                  $eventlist[] = $eventData;
+              }
+          }
+
+      } elseif (file_exists($xml_file_path)) {
+          $xml = new DOMDocument;
+          $xml->load($xml_file_path);
+          $tableevent = $xml->getElementsByTagName('event');
+
+          foreach ($tableevent as $event) {
+              if ($event) {
+                  $eventData = [
+                      'colorlight'      => parseEvent($event->getElementsByTagName('colors'), false, 'colorlight'),
+                      'colordark'       => parseEvent($event->getElementsByTagName('colors'), false, 'colordark'),
+                      'description'     => parseEvent($event->getElementsByTagName('description'), false, 'description'),
+                      'displaypriority' => intval(parseEvent($event->getElementsByTagName('details'), false, 'displaypriority')),
+                      'enddate'         => strtotime(parseEvent($event, true, false)), // Convert end date to timestamp
+                      'isseasonal'      => getBoolean(intval(parseEvent($event->getElementsByTagName('details'), false, 'isseasonal'))),
+                      'name'            => $event->getAttribute('name'),
+                      'startdate'       => strtotime(parseEvent($event, true, true)), // Convert start date to timestamp
+                      'specialevent'    => getBoolean(intval(parseEvent($event->getElementsByTagName('details'), false, 'specialevent')))
+                  ];
+                  $eventlist[] = $eventData;
+              }
+          }
+      } else {
+          die(json_encode([]));
       }
-    }
-    die(json_encode(['eventlist' => $eventlist, 'lastupdatetimestamp' => time()]));
 
+      error_log("Event list prepared: " . print_r($eventlist, true));
+      error_log("Last update timestamp: " . time());
+
+      $response = [
+          'eventlist' => $eventlist,
+          'lastupdatetimestamp' => time()
+      ];
+      header('Content-Type: application/json');
+      echo json_encode($response);
+      break;
   case 'boostedcreature':
     $creatureBoost = $db->query("SELECT * FROM " . $db->tableName('boosted_creature'))->fetchAll();
     $bossBoost     = $db->query("SELECT * FROM " . $db->tableName('boosted_boss'))->fetchAll();
