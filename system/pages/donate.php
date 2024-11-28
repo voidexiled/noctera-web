@@ -125,9 +125,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo '</pre>';
     }
 
-    echo "datos" . $dados;
+    echo "datos" . var_dump($dados);
     echo "response ".$response;
-    echo "resultado ".$resultado;
+    echo "resultado ".var_dump($resultado);
     // Check if collector_id is present
     if (!$collector_id) {
         echo '<p>Error: Collector ID not found in the response.</p>';
