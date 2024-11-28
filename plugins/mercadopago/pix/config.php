@@ -15,8 +15,8 @@
  $debug = true;
 $baseUrl = 'https://www.noctera-global.com/';
 $notificationUrl = 'https://www.noctera-global.com/?p=mpnotification';
-$noSessionUrl = 'https://wwwnoctera-global.com/?account/manage';
- $donationType = 'coins'; // coins, coins_transferable or premium_points
+$noSessionUrl = 'https://www.noctera-global.com/?account/manage';
+ $donationType = 'coins_transferable'; // coins, coins_transferable or premium_points
  $doublePoints = false; // not added yet
  $authorizationToken = 'APP_USR-6273024745334127-112011-950b61e93bafd3593af37efaa18866cd-621055093';
 

@@ -101,7 +101,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dados["payer"]["address"]["federal_unit"] = $country;
 
     $randomKey = md5(uniqid(rand(), true));
-    
     curl_setopt_array($curl, array(
         CURLOPT_URL => 'https://api.mercadopago.com/v1/payments',
         CURLOPT_RETURNTRANSFER => true,
@@ -115,13 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ),
     ));
     $response = curl_exec($curl);
-    echo $dados;
-    echo $response;
     $resultado = json_decode($response);
-    echo $config['mercadopago'];
     $collector_id = isset($resultado->id) ? $resultado->id : null;
-    echo '<br>';
-    echo $collector_id;
     curl_close($curl);
 
     // Display full response for debugging if debug is enabled
@@ -431,7 +425,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                                             <ul class="payment-options">
                                                                                 <div class="payment-option">
                                                                                     <li>
-                                                                                        <input type="radio" id="payment-1" name="pagamento" value="Pix" required>
+                                                                                        <input type="radio" id="payment-1" name="pagamento" value="metodo1" required>
                                                                                         <label for="payment-1">
                                                                                             <div class="paymentid"><img src="images/payment/paymentmethodcategory145.gif">
                                                                                             </div>
