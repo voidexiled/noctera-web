@@ -9,18 +9,18 @@
  * @version   2.0.0
  */
 
- $pointsByDonate = 1; //  coins
- $priceByPoints = 0.10; // Valor por ponto em reais
- $conversionRate = $pointsByDonate / $priceByPoints; 
- $debug = true;
+$pointsByDonate = 1; //  coins
+$priceByPoints = 0.10; // Valor por ponto em reais
+$conversionRate = $pointsByDonate / $priceByPoints;
+$debug = true;
 $baseUrl = 'https://www.noctera-global.com/';
 $notificationUrl = 'https://www.noctera-global.com/?p=mpnotification';
 $noSessionUrl = 'https://www.noctera-global.com/?account/manage';
- $donationType = 'coins_transferable'; // coins, coins_transferable or premium_points
- $doublePoints = false; // not added yet
- $authorizationToken = 'APP_USR-6273024745334127-112011-950b61e93bafd3593af37efaa18866cd-621055093';
+$donationType = 'coins_transferable'; // coins, coins_transferable or premium_points
+$doublePoints = false; // not added yet
+$authorizationToken = 'APP_USR-6273024745334127-112011-950b61e93bafd3593af37efaa18866cd-621055093';
 
- //Nao mexa em nada aqui pra baixo
+//Nao mexa em nada aqui pra baixo
 $conexao = mysqli_connect(
     configLua('mysqlHost'),
     configLua('mysqlUser'),
@@ -29,7 +29,7 @@ $conexao = mysqli_connect(
 );
 
 
- // Consulta SQL para recuperar os dados do pagador da tabela accounts com base no ID da sessão atual
+// Consulta SQL para recuperar os dados do pagador da tabela accounts com base no ID da sessão atual
 $query = "SELECT email, rlname, location, country, phone, `key` FROM accounts WHERE id = ?";
 $stmt = mysqli_prepare($conexao, $query);
 
@@ -53,8 +53,7 @@ if ($stmt) {
     // Se houver um erro na preparação da consulta, exibe uma mensagem de erro
     echo 'Erro ao preparar a consulta: ' . mysqli_error($conexao);
 }
- 
+
 if (!$conexao) {
     die("Connection failed: " . mysqli_connect_error());
 }
-?>

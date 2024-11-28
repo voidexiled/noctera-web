@@ -12,4 +12,5 @@ $config['client'] = '1340';
 $config['session_prefix'] = 'myaac_v9lyxflp_';
 $config['cache_prefix'] = 'myaac_ok5xu3lk_';
 
-$config['highscores_ids_hidden'] = array(1, 2, 3, 4, 5);
+$config['highscores_ids_hidden'] = array(1, 2, 3, 4, 5, 7);
+$config['mercadopago'] = true;
