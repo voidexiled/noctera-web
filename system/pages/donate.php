@@ -465,7 +465,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr style="display:none;">
+                                        <tr style="">
                                             <td>
                                                 <label for="description">Descrição:</label>
                                             </td>
@@ -473,7 +473,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 <input type="text" name="description" id="description" value="Account ID: <?= $account_logged->getId() ?> | Account Nome: <?= $account_logged->getName(); ?>">
                                             </td>
                                         </tr>
-                                        <tr style="display:none;">
+                                        <tr style="">
                                             <td>
                                                 <label for="name">Nome:</label>
                                             </td>
@@ -481,7 +481,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 <input type="text" name="first_name" id="first_name" value="<?= $rlname; ?>">
                                             </td>
                                         </tr>
-                                        <tr style="display:none;">
+                                        <tr style="">
                                             <td>
                                                 <label for="email_cob">Email:</label>
                                             </td>
