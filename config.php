@@ -118,10 +118,10 @@ $config = array(
 	'account_country_recognize' => true, // should country of user be automatically recognized by his IP? This makes an external API call to http://ipinfo.io
 
 	'account_coin_type_usage' => 'coins_transferable', // which coin you want to use, coins or coins_transferable to buy changes at site
-	'account_change_character_name' => false, // can user change their character name for coins?
-	'account_change_character_name_coins' => 250, // cost of name change
-	'account_change_character_sex' => false, // can user change their character sex for coins?
-	'account_change_character_sex_coins' => 150, // cost of sex change
+	'account_change_character_name' => true, // can user change their character name for coins?
+	'account_change_character_name_coins' => 400, // cost of name change
+	'account_change_character_sex' => true, // can user change their character sex for coins?
+	'account_change_character_sex_coins' => 350, // cost of sex change
 	'account_change_character_main' => true, // can user change their main character for coins?
 	'account_change_character_main_coins' => 250, // cost of main change
 	'characters_per_account' => 10,	// max. number of characters per account
@@ -129,7 +129,7 @@ $config = array(
 
 	// recovery key
 	'recovery_key_length' => 15,                // length of recovery key code
-	'account_show_rk' => false,
+	'account_show_rk' => true,
 	'generate_new_reckey' => true,				// let player generate new recovery key, he will receive e-mail with new rec key (not display on page, hacker can't generate rec key)
 	'generate_new_reckey_price' => 250,			// coins price for new recovery key
 
@@ -154,7 +154,7 @@ $config = array(
 	'recaptcha_enabled' => false, // enable recaptcha verification code
 	'recaptcha_site_key' => '', // get your own site and secret keys at https://www.google.com/recaptcha
 	'recaptcha_secret_key' => '',
-	'recaptcha_theme' => 'light', // light, dark
+	'recaptcha_theme' => 'dark', // light, dark
 
 	// e-mail senders
 	'send_mail_when_change_password' => true,	// send e-mail with new password when change password to account
@@ -225,7 +225,7 @@ $config = array(
 	// guilds
 	'guild_management' => true, // enable guild management system on the site?
 	'guild_need_level' => 100, // min. level to form a guild
-	'guild_need_premium' => true, // require premium account to form a guild?
+	'guild_need_premium' => false, // require premium account to form a guild?
 	'guild_image_size_kb' => 400, // maximum size of the guild logo image in KB (kilobytes)
 	'guild_description_chars_limit' => 1000, // limit of guild description
 	'guild_description_lines_limit' => 6, // limit of lines, if description has more lines it will be showed as long text, without 'enters'
@@ -306,15 +306,15 @@ $config = array(
 	// banner home
 	'banner_status' => true,
 	'banner_image' => '500x660.png', // templates->tibiacom->images->carousel
-	'banner_link' => 'www.instagram.com',
+	'banner_link' => 'https://chat.whatsapp.com/IHujY9Eza8mK5YVS94mPtE',
 
 	// status bar
 	'status_bar' => true,
 	'client_link' => 'https://github.com/voidexiled/noctera-launcher/releases/download/BASE/Noctera.Global.rar', // link to download tibia client
 	'discord_link' => 'https://discord.gg/4KzZMApf', // link to join discord channel
-	'whatsapp_link' => '', // wa.me/5511912345678
+	'whatsapp_link' => 'https://chat.whatsapp.com/IHujY9Eza8mK5YVS94mPtE', // wa.me/5511912345678
 	'instagram_link' => 'profile', // www.instagram.com/profile
-	'facebook_link' => 'page', // www.facebook.com/page
+	'facebook_link' => 'https://www.facebook.com/NocteraGlobal', // www.facebook.com/page
 	'collapse_status' => false,
 
 	// events
