@@ -306,7 +306,7 @@ $config = array(
 	// banner home
 	'banner_status' => true,
 	'banner_image' => '500x660.png', // templates->tibiacom->images->carousel
-	'banner_link' => 'https://chat.whatsapp.com/IHujY9Eza8mK5YVS94mPtE',
+	'banner_link' => 'chat.whatsapp.com/IHujY9Eza8mK5YVS94mPtE',
 
 	// status bar
 	'status_bar' => true,
